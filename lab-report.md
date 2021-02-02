@@ -33,6 +33,10 @@ library(tidyverse)
 firefly_data <- read_csv("https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter02/chap02q19FireflySpermatophoreMass.csv") 
 ```
 
+    ## Warning in unlink(c(requestFile, responseFile)): cannot get info on 'C:/Users/
+    ## alecw/AppData/Local/Temp/Rtmpo781P7/rstudio-ipc-requests-5903a075f92.rds',
+    ## reason 'The system cannot find the file specified'
+
     ## 
     ## -- Column specification --------------------------------------------------------
     ## cols(
@@ -61,18 +65,27 @@ ggplot(data = firefly_data) +
 
 \_\_\_
 
-> B. For part (A) I used A histogram due to the nature of the data being
-> numerical, which uses only one variable but has a large range of data.
+> B. What type of graph did you choose in part (A)? Why?
+
+*For part (A) I used a histogram due to the nature of the data being
+numerical, which uses only one variable but has a large range of data.*
 
 \_\_\_
 
-> C. The frequency distributon shows to be a bell curve while ignoring
-> the one outlier.
+> C. Describe the shape of the frequency distribution. What are its main
+> features?
+
+*The frequency distributon shows to be a bell curve while ignoring the
+one outlier.*
 
 \_\_\_
 
-> D. The largest measurement in the frequency distribution is considered
-> the Mode.
+> D. What term would be used to describe the largest measurement in the
+> frequency distribution? You can refer to the lecture slides, your
+> notes, or the textbook.
+
+*The largest measurement in the frequency distribution is considered the
+Mode.*
 
 \_\_\_
 
@@ -97,13 +110,20 @@ birds <- ebird_taxonomy %>%           # start with the ebird_taxonomy data
   filter(category == "species")       # remove non-species taxa
 ```
 
-> E. There are 10,721 bird species, which was found using the
-> count(species) command on the birds dataset.
+> E. How many bird species are in the new birds dataset? How did you
+> find out?
+
+*There are 10,721 bird species, which was found using the count(species)
+command on the birds dataset.*
 
 \_\_\_
 
-> H. There are 41 orders of birds, which was found using the
-> count(orders) command on the birds dataset.
+> H. How many orders are there? You can get this right by counting on
+> the graph, but you will only get full points if you use some code to
+> figure it out.
+
+*There are 41 orders of birds, which was found using the count(orders)
+command on the birds dataset.*
 
 \_\_\_
 
@@ -138,15 +158,18 @@ ggplot(data = birds) +
 
 \_\_\_
 
-> G. For the birds data-set I created a bar graph due to its data being
-> of categorical nature. The different bars are much more efficient at
-> expressing all of the different orders being examined in this data.
+> G. What kind of graph did you create? Why?
+
+*For the birds data-set I created a bar graph due to its data being of
+categorical nature. The different bars are much more efficient at
+expressing all of the different orders being examined in this data.*
 
 \_\_\_
 
 ## Links to peer review
 
 I reviewed Lukas Robinson’s lab report at this URL:
+<https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-Lukas535/issues/1>
 
 Lukas Robinson reviewed my lab report at this URL:
 <https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-AWhite3385/issues/1>
