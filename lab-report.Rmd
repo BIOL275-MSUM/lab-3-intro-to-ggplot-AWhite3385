@@ -10,17 +10,13 @@ Instructions for this lab report can be found on [Your assignment section of Lab
 ## Fireflies
 
 # load packages -----------------------------------------------------------
+
 >A. insert Rcode chunk 
+
 ```{r}
+library(tidyverse)
 
-firefly_data <- read_csv("https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter02/chap02q19FireflySpermatophoreMass.csv")
-
-firefly_data
-
-ggplot(data = firefly_data)
-
-ggplot(data = firefly_data) +
-  geom_histogram(mapping = aes(x = spermatophoreMass))
+firefly_data <- read_csv("https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter02/chap02q19FireflySpermatophoreMass.csv") 
 
 ggplot(data = firefly_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass),
@@ -80,23 +76,6 @@ birds <- ebird_taxonomy %>%           # start with the ebird_taxonomy data
   as_tibble() %>%                     # tibbles print better in the console
   filter(category == "species")       # remove non-species taxa
 
-birds
-
-distinct(birds, order)
-
-count(birds, order)
-
-ggplot(data = birds)
-
-ggplot(data = birds) +
-  geom_bar(mapping = aes(x = order))
-
-ggplot(data = birds) +
-  geom_bar(mapping = aes(x = fct_infreq(order)))
-
-ggplot(data = birds) +
-  geom_bar(mapping = aes(x = fct_infreq(order)), fill = "#C5351B")
-
 ggplot(data = birds) +
   geom_bar(mapping = aes(x = fct_infreq(order)), fill = "#C5351B", 
            width = .8) +
@@ -121,7 +100,7 @@ ggplot(data = birds) +
 
 ## Links to peer review
 
-I reviewed Lukas Robinson's lab report at this URL: 
+I reviewed Lukas Robinson's lab report at this URL: https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-Lukas535/issues/1 
 
 Lukas Robinson reviewed my lab report at this URL: https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-AWhite3385/issues/1
 
